@@ -14,11 +14,12 @@
     <!--Create HTML Content to Display Results  -->
 
     <h1>Enter any key to start</h1>
+    <h3 id="displayText"></h3>
 
-    <p>Wins:</p>
-    <p>Losses:</p>
-    <p>Guesses Left:</p>
-    <p>Guesses Made:</p>
+    <p>Wins: <span id="wins"></span></p>
+    <p>Losses: <span id="losses"></span></p>
+    <p>Guesses Left: <span id="guessLeft"></span></p>
+    <p>Guesses Made: <span id="guessMade"></span></p>
 
     <script>
 
@@ -26,14 +27,25 @@
     // ------------------
 
     // WINS
+    var wins = 0;
     // LOSSES
+    var losses = 0;
+    // GUESSES MADE
+    var guessMade = [];
+    // GUESSES LEFT
+    var guessLeft = 9;
     // USERGUESS
+    var userGuess; 
     // COMPUTERGUESS
+    var computerGuess; 
     // COMPUTER CHOICES
-
+    var computerChoices = ['a','b','c','d','e','f','g','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    // DISPLAYTEXT
+    var displayText = "";
 
     // FUNCTIONS 
     // ------------------
+    
     // DISPLAY RESULTS TO PAGE(DOM)
     // GENERATE A RANDOM LETTER FOR COMPUTER
     // RESET SCORES
