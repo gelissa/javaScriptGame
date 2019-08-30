@@ -6,22 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: auto;
+            grid-template-rows: 50px 50px 50px 50px;
+            background-color: rgb(197, 194, 194); 
+        }
+        .mainHeader {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background-color: gray;
+        }
     
+    </style>
+
 </head>
 
 <body>
     <!--Create HTML Content to Display Results  -->
+    <div class="container">
+        <div class="mainHeader"><h1>Enter any key to start</h1></div>
+        <div class="winLose"><h3 id="displayText"></h3></div>
+        <div class="wins"><p>Wins: <span id="wins"></span></p></div>
+        <div class="losses"><p>Losses: <span id="losses"></span></p></div>
+        <div class="guessLeft"><p>Guesses Left: <span id="guessLeft"></span></p></div>
+        <div class="guessMade"><p>Guesses Made: <span id="guessMade"></span></p></div>
+    </div>
 
-    <h1>Enter any key to start</h1>
-    <h3 id="displayText"></h3>
-
-    <p>Wins: <span id="wins"></span></p>
-    <p>Losses: <span id="losses"></span></p>
-    <p>Guesses Left: <span id="guessLeft"></span></p>
-    <p>Guesses Made: <span id="guessMade"></span></p>
-
-<!-- GAME SCRIPT -->
-<script src="assets/javascript/game.js"></script>
+    <!-- GAME SCRIPT -->
+    <script src="assets/javascript/game.js"></script>
 
 </body>
 
